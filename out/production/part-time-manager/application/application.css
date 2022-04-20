@@ -1,0 +1,4 @@
+.register_textfield {
+    -fx-text-box-border:transparent;
+    -fx-background-color: transparent;
+}

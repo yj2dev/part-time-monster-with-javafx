@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.page.register.RegisterController">
+   <children>
+      <RadioButton fx:id="rbPrivate" layoutX="106.0" layoutY="83.0" mnemonicParsing="false" onAction="#onClickUserType" text="개인회원">
+         <toggleGroup>
+            <ToggleGroup fx:id="userTypeGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbCompany" layoutX="223.0" layoutY="83.0" mnemonicParsing="false" onAction="#onClickUserType" text="기업회원" toggleGroup="$userTypeGroup" />
+      <Pane fx:id="pHeader" prefHeight="64.0" prefWidth="400.0" style="-fx-background-color: #ffeb00;">
+         <children>
+            <Text fx:id="tUserType" layoutX="144.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="개인회원 가입">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: transparent; -fx-cursor: hand;">
+               <graphic>
+                  <Pane prefHeight="24.0" prefWidth="24.0">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0">
+                           <image>
+                              <Image url="@../../asset/back.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="117.0" prefHeight="108.0" prefWidth="370.0" style="-fx-border-color: #dedede;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="아이디" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfId" layoutX="119.0" layoutY="4.0" prefHeight="22.0" prefWidth="230.0" promptText="4~15자 영문, 숫자" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="100.0" layoutY="36.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="46.0" text="비밀번호" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="270.0" layoutX="101.0" layoutY="72.0" startX="-100.0" stroke="#dedede" />
+            <PasswordField fx:id="tfPassword" layoutX="119.0" layoutY="40.0" prefWidth="230.0" promptText="8~16자 영문, 숫자, 특수기호" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="tfCheckPassword" layoutX="119.0" layoutY="76.0" prefWidth="230.0" promptText="비밀번호 재확인" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="241.0" prefHeight="180.0" prefWidth="370.0" style="-fx-border-color: #dedede;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="이름" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfName" layoutX="119.0" layoutY="4.0" prefHeight="22.0" prefWidth="230.0" promptText="이름을 입력하세요" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="100.0" layoutY="36.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="46.0" text="생년월일" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="48.0" text="(선택)" textFill="#686868" />
+            <TextField fx:id="tfBirth" layoutX="119.0" layoutY="40.0" prefHeight="22.0" prefWidth="230.0" promptText="YYYYMMDD (예.19990806)" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="101.0" layoutY="72.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="82.0" text="성별" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="84.0" text="(선택)" textFill="#686868" />
+            <RadioButton fx:id="rbMan" layoutX="126.0" layoutY="83.0" mnemonicParsing="false" text="남자">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectSexGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbWoman" layoutX="202.0" layoutY="83.0" mnemonicParsing="false" text="여자" toggleGroup="$selectSexGroup" />
+            <Line endX="270.0" layoutX="100.0" layoutY="108.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="118.0" text="이메일" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEmail" layoutX="119.0" layoutY="112.0" prefHeight="22.0" prefWidth="230.0" promptText="email@example.com" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="101.0" layoutY="144.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="154.0" text="휴대폰" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfPhone" layoutX="119.0" layoutY="148.0" prefHeight="22.0" prefWidth="230.0" promptText="휴대폰(- 제외 입력)" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane fx:id="pCompanyForm" layoutX="15.0" layoutY="436.0" prefHeight="218.0" prefWidth="370.0" style="-fx-border-color: #dedede;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="사업자번호" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCompanyNumber" layoutX="119.0" layoutY="4.0" prefHeight="22.0" prefWidth="211.0" promptText="사업자번호(- 제외 입력)" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="100.0" layoutY="36.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="46.0" text="상호명" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCompanyName" layoutX="119.0" layoutY="40.0" prefHeight="22.0" prefWidth="211.0" promptText="상호명을 입력하세요" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="101.0" layoutY="72.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="82.0" text="대표자명" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCompanyCeoName" layoutX="119.0" layoutY="76.0" prefHeight="22.0" prefWidth="211.0" promptText="대표자명을 입력하세요" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="100.0" layoutY="108.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="118.0" text="연락처" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCompanyContact" layoutX="119.0" layoutY="112.0" prefHeight="22.0" prefWidth="211.0" promptText="연락처(- 제외 입력)" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="101.0" layoutY="144.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="154.0" text="주소" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCompanyAddress" layoutX="119.0" layoutY="148.0" prefHeight="22.0" prefWidth="211.0" promptText="주소를 입력하세요" styleClass="register_textfield" stylesheets="@../../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="270.0" layoutX="100.0" layoutY="180.0" startX="-100.0" stroke="#dedede" />
+            <Label layoutX="14.0" layoutY="190.0" text="회사규모" textFill="#686868">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cbCompanySize" layoutX="126.0" layoutY="188.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnRegister" layoutX="15.0" layoutY="738.0" mnemonicParsing="false" onAction="#onSubmitRegister" prefHeight="48.0" prefWidth="370.0" style="-fx-background-color: #ffeb00; -fx-cursor: hand;" text="가입하기">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

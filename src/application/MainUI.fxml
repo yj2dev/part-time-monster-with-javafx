@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pMainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button id="login" fx:id="btnLogin" layoutX="336.0" layoutY="14.0" mnemonicParsing="false" onAction="#onShowLoginModal" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-radius: 50%; -fx-border-color: #ffffff; -fx-cursor: hand; -fx-border-width: 2px;" textAlignment="CENTER">
+         <graphic>
+            <Pane prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="-1.0">
+                     <image>
+                        <Image url="@asset/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </graphic></Button>
+      <Pane fx:id="pLoginModal" layoutX="16.0" layoutY="64.0" prefHeight="95.0" prefWidth="369.0" style="-fx-background-color: #fef144; -fx-background-radius: 16px; -fx-border-radius: 16px;" visible="false">
+         <children>
+            <Button layoutX="323.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCloseLoginModal" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+               <graphic>
+                  <Pane prefHeight="16.0" prefWidth="16.0">
+                     <children>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@asset/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </graphic>
+            </Button>
+            <Button layoutX="91.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickRegister" prefHeight="32.0" prefWidth="84.0" style="-fx-border-radius: 8px; -fx-background-radius: 8px; -fx-background-color: #ffffff; -fx-text-fill: #454a58; -fx-cursor: hand;" text="회원가입" />
+            <Button layoutX="195.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="32.0" prefWidth="84.0" style="-fx-border-radius: 8px; -fx-background-radius: 8px; -fx-background-color: #363d4d; -fx-text-fill: #ffffff; -fx-cursor: hand;" text="로그인" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="spContents" layoutX="1.0" layoutY="170.0" prefHeight="600.0" prefWidth="400.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+   </children>
+</Pane>
