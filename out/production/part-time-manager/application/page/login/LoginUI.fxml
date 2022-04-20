@@ -8,11 +8,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.page.login.LoginController">
    <children>
-      <Button layoutX="53.0" layoutY="216.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" text="로그인" />
-      <Button layoutX="223.0" layoutY="200.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" text="회원가입" />
       <Button layoutX="352.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCloseLogin" style="-fx-background-color: transparent; -fx-cursor: hand;">
          <graphic>
             <Pane prefHeight="18.0" prefWidth="18.0">
@@ -26,26 +25,52 @@
             </Pane>
          </graphic>
       </Button>
-      <Pane layoutX="15.0" layoutY="314.0" prefHeight="154.0" prefWidth="370.0" style="-fx-border-color: #dedede;">
+      <Pane layoutX="15.0" layoutY="314.0" prefHeight="152.0" prefWidth="370.0" style="-fx-border-color: #dedede; -fx-background-color: #ffffff; -fx-border-width: 2px;">
          <children>
-            <TextField fx:id="tfId" layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="230.0" promptText="아이디" styleClass="register_textfield" stylesheets="@../../application.css">
+            <TextField fx:id="tfId" layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="338.0" promptText="아이디" styleClass="register_textfield" stylesheets="@../../application.css">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Line endX="270.0" layoutX="100.0" layoutY="51.0" startX="-100.0" stroke="#dedede" />
-            <PasswordField fx:id="tfPassword" layoutX="14.0" layoutY="63.0" prefWidth="230.0" promptText="비밀번호" styleClass="register_textfield" stylesheets="@../../application.css">
+            <Line endX="268.0" layoutX="101.0" layoutY="51.0" startX="-100.0" stroke="#dedede" strokeWidth="2.0" />
+            <PasswordField fx:id="tfPassword" layoutX="14.0" layoutY="63.0" prefHeight="28.0" prefWidth="338.0" promptText="비밀번호" styleClass="register_textfield" stylesheets="@../../application.css">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
          </children>
       </Pane>
-      <Button fx:id="btnRegister" layoutX="15.0" layoutY="418.0" mnemonicParsing="false" onAction="#onSubmitRegister" prefHeight="48.0" prefWidth="370.0" style="-fx-background-color: #ffeb00; -fx-cursor: hand;" text="로그인">
+      <Button fx:id="btnLogin" layoutX="15.0" layoutY="417.0" mnemonicParsing="false" onAction="#onSubmitLogin" prefHeight="48.0" prefWidth="370.0" style="-fx-background-color: #ffeb00; -fx-cursor: hand;" text="로그인">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Line endX="270.0" layoutX="114.0" layoutY="417.0" startX="-100.0" stroke="#dedede" />
+      <Line endX="270.0" layoutX="115.0" layoutY="417.0" startX="-100.0" stroke="#dedede" />
+      <Button fx:id="btnPrivate" layoutX="15.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickPrivate" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #ffffff; -fx-border-color: #f3cd1e; -fx-border-width: 2px; -fx-cursor: hand;" text="개인회원">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCompany" layoutX="206.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickCompany" prefHeight="48.0" prefWidth="178.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #e2e2e2; -fx-border-width: 2px; -fx-cursor: hand;" text="기업회원">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="116.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="계정이 없으세요?" />
+      <Text fill="#1f3ecb" layoutX="217.0" layoutY="520.0" onMouseClicked="#onClickRegisterLink" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" text="가입하기" textAlignment="RIGHT" underline="true">
+         <font>
+            <Font name="NanumGothicBold" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="66.0" layoutY="162.0">
+         <image>
+            <Image url="@../../asset/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="200.0" layoutX="125.0" layoutY="163.0">
+         <image>
+            <Image url="@../../asset/title.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
