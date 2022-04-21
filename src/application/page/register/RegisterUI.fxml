@@ -35,7 +35,7 @@
                      <children>
                         <ImageView fitHeight="24.0" fitWidth="24.0">
                            <image>
-                              <Image url="@../../asset/back.png" />
+                              <Image url="@../../asset/img/back.png" />
                            </image>
                         </ImageView>
                      </children>

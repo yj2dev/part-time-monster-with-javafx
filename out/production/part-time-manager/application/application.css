@@ -1,4 +1,18 @@
+.font {
+    -fx-font-family: "NanumGothic";
+}
+
 .register_textfield {
     -fx-text-box-border:transparent;
     -fx-background-color: transparent;
+}
+
+.scroll_pane {
+    -fx-background-color: transparent;
+}
+.text-area_write {
+    text-area-background: #f4f4f4 ;
+}
+.text-area .content {
+    -fx-background-color: text-area-background ;
 }
